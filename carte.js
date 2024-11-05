@@ -1,11 +1,14 @@
+import products from './sample.json' with { type: 'json'}
+
 async function displayProducts() {
     try {
-        const response = await fetch('http://192.168.5.181:3000/api/products');
-        if (!response.ok) {
-            throw new Error('Erreur réseau');
-        }
+        // const response = await fetch('http://192.168.5.181:3000/home');
+        // if (!response.ok) {
+        //     throw new Error('Erreur réseau');
+        // }
         
-        const data = await response.json();
+        // const data = await response.json();
+        const data = products
         const container = document.querySelector('#containerCarte');
         
         data.forEach(product => {
@@ -20,12 +23,16 @@ async function displayProducts() {
     } 
 }
 
+const panier = []
+
 function createCard(product) {
+
     const carteDiv = document.createElement('div');
     carteDiv.className = 'carte';
 
-    const imgDiv = document.createElement('div');
+    const imgDiv = document.createElement('img');
     imgDiv.className = 'mainImage';
+    imgDiv.src = product.image_links[0];
 
     const descDiv = document.createElement('div');
     descDiv.className = 'productdesc';
@@ -36,6 +43,11 @@ function createCard(product) {
 
     const btnElement = document.createElement('button');
     btnElement.className = 'btn addToCart';
+    btnElement.innerText = 'Ajouter au panier'
+    btnElement.addEventListener('click', () => {
+        panier.push(product.id);
+        console.log(panier);
+    })
 
     carteDiv.appendChild(imgDiv);
     carteDiv.appendChild(descDiv);
@@ -44,5 +56,4 @@ function createCard(product) {
     return carteDiv;
 }
 
-// Appel de la fonction
 displayProducts();
