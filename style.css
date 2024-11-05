@@ -3,9 +3,36 @@
 @tailwind utilities;
 
 :root {
-
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  border: solid 3px rgb(255, 0, 0);
+}
 
+.site-nav {
+  border: solid 1px blue;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
 
+.main-container {
+  border: solid 1px rgb(255, 0, 242);
+  margin: 0.5rem;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.site-footer {
+  border: solid 1px rgb(38, 254, 10);
+  margin: 0.5rem;
+}
