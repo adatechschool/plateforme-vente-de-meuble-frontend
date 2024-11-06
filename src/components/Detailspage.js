@@ -1,4 +1,9 @@
 // Fetch de la table "products" 
+import Nav from "./NavDetail";
+
+
+document.getElementById("nav").appendChild(Nav());
+
 async function displayDetails() {
     const data = {
         "id": 6,
