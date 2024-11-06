@@ -29,7 +29,7 @@ function rigthtNave() {
     div.className = 'self-end rounded-lg px-3 py-2 text-slate-700 font-medium';
     const links = [
         ['🩵', '/like'],
-        ['🛒', '/shopping-cart'],
+        ['🛒', '/pagepanier'],
         ['👤', '/dashboard'],
       ];
 
