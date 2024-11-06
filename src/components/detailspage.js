@@ -57,6 +57,7 @@ let input = document.getElementById('input');
 
 let count = 0; 
 let max = 10; 
+let min = 1
 
 plus.addEventListener('click', function() {
     count = count + 1;
