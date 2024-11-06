@@ -59,13 +59,14 @@ let count = 0;
 let max = 10; 
 let min = 1
 
-plus.addEventListener('click', function() {
+plus.addEventListener('click', function totalClick() {
     count = count + 1;
     input.value = count;
 
 })
-moins.addEventListener('click', function() {
-    count = count - 1;
-    input.value = count;
-
+moins.addEventListener('click', function totalClick() {
+    if (count > 0) {
+        count = count - 1;
+        input.value = count;
+    }
 })
