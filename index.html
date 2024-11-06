@@ -6,27 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meublio</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="/main.js" defer></script>
-    <script type="module" src="/carte.js" defer></script>
+    <script type="module" src="/src/main.js" defer></script>
   </head>
 
   <body>
     <nav class="site-nav">
-      <h1>meublio</h1>
-
-      <div class="search-bar">
-        <input type="search" id="search-bar" placeholder="Rechercher..." />
-        <button type="button" id="search-button">🔍</button>
-      </div>
-
-      <div class="shopping-cart">
-        <button type="button" id="shopping-cart-button">Panier 🛒</button>
-      </div>
-
-      <div class="sign-log-container">
-        <button type="button" id="sign-up-button">Sign up</button>
-        <button type="button" id="log-in-button">Log in</button>
-      </div>
+      <div id="Nav"></div>
     </nav>
 
     <div class="main-container">
@@ -99,16 +84,7 @@
       </div>
 
       <div class="grid-container">
-        <div class="image-grid">
-          <img src="image1.jpg" alt="Image 1" />
-          <img src="image2.jpg" alt="Image 2" />
-          <img src="image3.jpg" alt="Image 3" />
-          <img src="image4.jpg" alt="Image 4" />
-          <img src="image5.jpg" alt="Image 5" />
-          <img src="image6.jpg" alt="Image 6" />
-          <img src="image6.jpg" alt="Image 7" />
-          <img src="image6.jpg" alt="Image 8" />
-        </div>
+        <div id="cartes"></div>
       </div>
 
     </div>
