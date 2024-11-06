@@ -1,6 +1,6 @@
 import './styles/style.css'
-import Nav from './components/nav';
-import displayProducts from './components/carte';
+import Nav from './components/Nav';
+import displayProducts from './components/Carte';
 
-document.getElementById('Nav').appendChild(Nav());
+document.getElementById('nav').appendChild(Nav());
 document.getElementById('cartes').appendChild(displayProducts());
