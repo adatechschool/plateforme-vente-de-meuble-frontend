@@ -16,7 +16,7 @@ async function displayDetails() {
       }
 
 }
-async function displayDetails() {
+async function displayDetailsProd() {
     try {
         const response = await fetch('http://192.168.5.181:3000/api/pathpourdetails');
         if (!response.ok) {

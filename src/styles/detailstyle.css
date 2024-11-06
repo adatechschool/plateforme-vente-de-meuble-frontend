@@ -98,7 +98,6 @@ h1 {
     text-align: center; 
     margin-top: 2rem;
     margin-left: 120px;
-    
   }
 
 .card {
@@ -120,6 +119,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
