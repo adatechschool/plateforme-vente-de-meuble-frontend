@@ -14,7 +14,8 @@ function sortListByType(word) {
   const data = products;
   console.log(word)
   const container = document.createElement('div');
-
+  container.className = 'cardContainer'
+  container.classList.add('grid', 'gap-2', 'grid-cols-4', 'p-4')
   const cartesContainer  = document.getElementById('cartes');
   cartesContainer.innerHTML = "";
   let regex = new RegExp(word.normalize("NFD").replace(/[\u0300-\u036f]/g, ""), "i");
