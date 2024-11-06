@@ -28,9 +28,14 @@ function displayProducts() {
 const panier = []
 
 function createCard(product) {
-
+    
     const carteDiv = document.createElement('div');
     carteDiv.className = 'carte';
+
+    const clickCarte = document.createElement('a');
+    clickCarte.href = '';
+    clickCarte.className = 'linkcarte';
+
 
     const imgDiv = document.createElement('img');
     imgDiv.className = 'mainImage';
@@ -51,11 +56,13 @@ function createCard(product) {
         console.log(panier);
     })
 
-    carteDiv.appendChild(imgDiv);
+    clickCarte.appendChild(imgDiv);
+    carteDiv.appendChild(clickCarte);
     carteDiv.appendChild(descDiv);
     carteDiv.appendChild(btnElement);
+   
 
-    return carteDiv;
+    return carteDiv
 }
 
 export default displayProducts;
