@@ -1,3 +1,5 @@
+import createCard from '../utils/Createcard';
+
 //import products from '../data/sample.json' with { type: 'json'}
 import products from '../data_test/sample.json' with { type: 'json'}
 
@@ -24,46 +26,6 @@ function displayProducts() {
         container.innerHTML = `<p>Erreur lors du chargement des produits: ${error.message}</p>`;
         return container;
     } 
-}
-
-const panier = []
-
-function createCard(product) {
-    
-    const carteDiv = document.createElement('div');
-    carteDiv.className = 'carte';
-
-    const clickCarte = document.createElement('a');
-    clickCarte.href = '';
-    clickCarte.className = 'linkcarte';
-
-
-    const imgDiv = document.createElement('img');
-    imgDiv.className = 'mainImage';
-    imgDiv.src = product.image_links[0];
-
-    const descDiv = document.createElement('div');
-    descDiv.className = 'productdesc';
-    descDiv.innerHTML = `
-        <h2>${product.product_name}</h2>
-        <p>Prix: ${product.price}€</p>
-    `;
-
-    const btnElement = document.createElement('button');
-    btnElement.className = 'btn addToCart';
-    btnElement.innerText = 'Ajouter au panier'
-    btnElement.addEventListener('click', () => {
-        panier.push(product.id);
-        console.log(panier);
-    })
-
-    clickCarte.appendChild(imgDiv);
-    carteDiv.appendChild(clickCarte);
-    carteDiv.appendChild(descDiv);
-    carteDiv.appendChild(btnElement);
-   
-
-    return carteDiv
 }
 
 export default displayProducts;
