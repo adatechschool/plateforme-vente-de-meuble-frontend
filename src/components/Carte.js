@@ -1,4 +1,5 @@
-import products from '../data/sample.json' with { type: 'json'}
+//import products from '../data/sample.json' with { type: 'json'}
+import products from '../data_test/sample.json' with { type: 'json'}
 
 function displayProducts() {
     try {

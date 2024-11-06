@@ -1,3 +1,4 @@
+//import products from '../data/sample.json' with { type: 'json'}
 import products from '../data_test/sample.json' with { type: 'json'}
 
 import createCard from './Createcard';
@@ -11,7 +12,7 @@ function sortListByType(word) {
   
   // const data = await response.json();
   const data = products;
-
+  console.log(word)
   const container = document.createElement('div');
 
   const cartesContainer  = document.getElementById('cartes');

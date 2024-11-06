@@ -1,3 +1,5 @@
+import sortListByType from '../utils/Filter'
+
 function logo(title, url) {
     const div = document.createElement('div');
     const a = document.createElement('a');
@@ -15,7 +17,7 @@ function searchBar() {
     input.type = 'text';
     input.placeholder = 'Recherche...';
     input.className = 'rounded-lg px-3 py-2 text-slate-700 border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-500';
-  
+    input.onkeyup = function() { sortListByType(this.value)};
     div.appendChild(input);
     return div;
   }
