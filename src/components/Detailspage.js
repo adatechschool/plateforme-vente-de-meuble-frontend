@@ -1,11 +1,3 @@
-
-// function toggleNavbar(collapseID)
-// {
-//   document.getElementById(collapseID).classList.toggle("hidden");
-//   document.getElementById(collapseID).classList.toggle("flex");
-// }
-
-
 // Fetch de la table "products" 
 async function displayDetails() {
     const data = {
@@ -23,50 +15,49 @@ async function displayDetails() {
         "updated_at": "2024-02-01T08:10:00.000Z"
       }
 
-    // try {
-    //     const response = await fetch('http://192.168.5.181:3000/api/products');
-    //     if (!response.ok) {
-    //         throw new Error('Erreur réseau');
-    //     }
+}
+async function displayDetails() {
+    try {
+        const response = await fetch('http://192.168.5.181:3000/api/pathpourdetails');
+        if (!response.ok) {
+            throw new Error('Erreur réseau');
+        }
         
-    //     const data = await response.json();
-    //     const container = document.querySelector('#detailsCarte');
+        const data = await response.json();
         
+        
+        data.forEach(product => {
+            const card = createCard(product);
+            container.appendChild(card);
+        });
 
-    // } catch (error) {
-    //     console.error('Erreur:', error);
-    //     const container = document.querySelector('#detailsCarte');
-    //     container.innerHTML = `<p>Erreur lors du chargement des produits: ${error.message}</p>`;
-    // } 
+    } catch (error) {
+        console.error('Erreur:', error);
+        container.innerHTML = `<p>Erreur lors du chargement des produits: ${error.message}</p>`;
+    } 
 }
 
-// ensuite il faut faire une fonction dans laquelle tu pourras mettre le code dont tu as besoin
+// ensuite il faut faire une fonction dans laquelle tu pourras mettre le code donc tu as besoin
 
-// function createCard(id) {
-//     for (let i=0; i<length; i++)
-//         {
-//         if ([i]=="id"){
-//           alert("voici les détails")
-//         }
-// }
-// }
+function createCard(product) {
+}
 
-let moins = document.getElementById('moins');
-let plus = document.getElementById('plus');
-let input = document.getElementById('input');
+let count = 0;
 
-let count = 0; 
-let max = 10; 
-let min = 1
-
-plus.addEventListener('click', function totalClick() {
-    count = count + 1;
-    input.value = count;
-
-})
-moins.addEventListener('click', function totalClick() {
-    if (count > 0) {
-        count = count - 1;
-        input.value = count;
+let panier = document.getElementById('panier').addEventListener('click', function ajoutPanier(){
+    if(count > 0){
+        count = count +1; 
+        
     }
+    console.log(count);
 })
+
+
+
+
+
+
+
+
+
+

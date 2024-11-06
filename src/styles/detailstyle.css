@@ -83,32 +83,23 @@ h1 {
 }
 .infoprod{
   text-align: center; 
-  margin-top: 2rem;
+  margin-top: 4rem;
   height: 10em;
   color: black;
   border: solid;
 }
 
-
-  
-  button, input {
-    border: none; 
-    outline: none; 
-    font-size : 20px; 
-  }
-  
-  button {
-    width: 35px;
-    background-color: #eee;
-    cursor: pointer; 
-  }
-  
-  input {
-    width: 50px;
-    text-align: center; 
+ button {
+    border: solid;
+    height: 4em; 
+    width: 200px;
+    font-style: normal;
     background-color: #888;
+    text-align: center; 
+    margin-top: 2rem;
+    margin-left: 120px;
+    
   }
-
 
 .card {
   padding: 2em;
