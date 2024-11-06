@@ -8,7 +8,7 @@ function displayProducts() {
         // }
         
         // const data = await response.json();
-        const data = products.products
+        const data = products
         const container = document.createElement('div');;
         data.forEach(product => {
             const card = createCard(product);

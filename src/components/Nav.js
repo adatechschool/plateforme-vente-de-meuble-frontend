@@ -17,7 +17,7 @@ function searchBar() {
     input.className = 'rounded-lg px-3 py-2 text-slate-700 border border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-500';
   
     div.appendChild(input);
-    div.appendChild(filterDropdown());
+    //div.appendChild(filterDropdown());
     return div;
   }
 
