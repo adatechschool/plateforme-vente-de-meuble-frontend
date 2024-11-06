@@ -1,250 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pagepanier</title>
-    <link rel="stylesheet" href="style.panier.css">
+    <link rel="stylesheet" href="/src/styles/panier.css" />
+    <script type="module" src="/src/main.js" defer></script>
+
+
 </head>
 <body>
-    <header class="header">
-
-        <div class="menu-toggle" tabindex="0" aria-expanded="false" aria-controls="sidebar-menu">
-            <a href="#header" id="burger-menu-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                    <path d="M3 4H21V6H3V4ZM3 11H15V13H3V11ZM3 18H21V20H3V18Z"></path>
-                </svg> Menu </a>
-            <a href="#search-block"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                    <path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"></path>
-                </svg> Recherche
-            </a>
-  
-            <!-- Ici, vous pouvez ajouter le JavaScript pour toogler le menu -->
-        </div>
-        <div class="header-center">
-            <div class="logo__">
-                <a href="/"><img width="638" height="129" src="https://www.francecanape.com/wp-content/uploads/2022/10/logo-black-min.svg" alt="France Canapé : n° 1 du canapé et convertible - Paris"></a>
-            </div>
-        </div>
-  
-        <div class="links">
-  
-         <span id="bt_storelocator" class="hide-for-small" style="position:relative; margin-right:2rem; display:inline-flex; justify-content:center; align-items:center; padding: 1rem 0.5rem; width:250px; text-align: center; overflow: hidden; background:#000">
-                <a href="/magasins" style="color: white; text-decoration: none;line-height:1.25;align-items: center; text-transform:uppercase; font-weight:700; font-size:.75rem; position:relative; z-index:1; margin:0 auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,1)">
-                        <path d="M18.364 17.364L12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364ZM12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15ZM12 13C10.8954 13 10 12.1046 10 11C10 9.89543 10.8954 9 12 9C13.1046 9 14 9.89543 14 11C14 12.1046 13.1046 13 12 13Z"></path>
-                    </svg> Trouver votre magasin
-                    <small class="didot" style="text-transform:none; font-size:110%;">Pour une expérience sur-mesure</small>
-                </a>
-                <span style="content:''; position:absolute; top:0; left:0; right:0; bottom:0; background-image: url('https://media.francecanape.com/stores/magasin-haussmann.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.75; z-index: 0;"></span>
-                <!-- Triangle blanc centré en bas -->
-                <span style="position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:0; height:0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #ffffff; z-index:2;"></span>
-            </span>
-  
-  
-            <span class="show-for-small" style="margin-right:1rem;position:relative;">
-                <a href="/magasins"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                        <path d="M12 20.8995L16.9497 15.9497C19.6834 13.2161 19.6834 8.78392 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.31658 8.78392 4.31658 13.2161 7.05025 15.9497L12 20.8995ZM12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13ZM12 15C9.79086 15 8 13.2091 8 11C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11C16 13.2091 14.2091 15 12 15Z"></path>
-                    </svg> Trouver votre magasin </a></span>
-            <span id="bt_user" class="hide-for-small" style="margin-right:1rem;position:relative;font-size:0"><a href="/compte">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20 22H18V20C18 18.3431 16.6569 17 15 17H9C7.34315 17 6 18.3431 6 20V22H4V20C4 17.2386 6.23858 15 9 15H15C17.7614 15 20 17.2386 20 20V22ZM12 13C8.68629 13 6 10.3137 6 7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7C18 10.3137 15.3137 13 12 13ZM12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"></path></svg>           
-             </a></span>
-            <span id="bt_panier" style="margin-right:1rem;position:relative;font-size:0">
-  
-  
-  <a href="/cart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7.00488 7.99966V5.99966C7.00488 3.23824 9.24346 0.999664 12.0049 0.999664C14.7663 0.999664 17.0049 3.23824 17.0049 5.99966V7.99966H20.0049C20.5572 7.99966 21.0049 8.44738 21.0049 8.99966V20.9997C21.0049 21.5519 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.5519 3.00488 20.9997V8.99966C3.00488 8.44738 3.4526 7.99966 4.00488 7.99966H7.00488ZM7.00488 9.99966H5.00488V19.9997H19.0049V9.99966H17.0049V11.9997H15.0049V9.99966H9.00488V11.9997H7.00488V9.99966ZM9.00488 7.99966H15.0049V5.99966C15.0049 4.34281 13.6617 2.99966 12.0049 2.99966C10.348 2.99966 9.00488 4.34281 9.00488 5.99966V7.99966Z"></path></svg>    <span class="count_panier"> 0</span> </a>0</span>
-  
-        </div>
-  
-        <div id="sidebar-menu" class="sidebar">
-            <a href="#" id="close-menu">✕ Fermer</a>
-            <div class="menu-item_head" id="menu-item_head-1">
-                <a href="#" class="sub"><span>Canapés</span></a>
-                <div class="submenu toplevel" style="display: none; margin-top: 80px; height: calc(-100px + 100vh);">
-                    <a href="#" class="sub_back"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                            <path d="M11.8284 12.0005L14.6569 14.8289L13.2426 16.2431L9 12.0005L13.2426 7.75781L14.6569 9.17203L11.8284 12.0005Z"></path>
-                        </svg> <span>Retour</span></a>
-  
-  
-                    <a href="/c/canapes/petit-canape-2-places/" class="sub subsub"><span>Petits canapés 2 places</span></a>
-                    <a href="/c/canapes/canape-3-places/" class="sub subsub"><span>Canapés 3 places</span></a>
-                    <a href="/c/canapes/grand-canape-4-places/" class="sub subsub"><span>Grands canapés 4 places</span></a>
-                    <a href="/c/canapes/canape-angle/" class="sub subsub" style="margin-bottom:2rem"><span>Canapés d'angle</span></a>
-  
-  
-                    <ul style="display: flex; flex-wrap:wrap; padding-bottom:3rem;padding-right:1rem">
-                        
-  
-                        <li class="fc-mega-menu-grid__items" style="width:50%">
-                            <a href="/in/collection-marly/" style="display:block; width:100%; height:100%; cursor:pointer">
-  
-                                <div class="">
-                                    <picture class="fc-smart-picture">
-                                        <img data-lazy-sizes="(min-width: 0rem) 50vw" alt="Collection Marly" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="fc-smart-picture__object" data-lazy-src="https://www.francecanape.com/wp-content/uploads/2024/06/vignettes-marly-scaled.jpg"><noscript><img sizes="(min-width: 0rem) 50vw" alt="Collection Marly" src="https://www.francecanape.com/wp-content/uploads/2024/06/vignettes-marly-scaled.jpg" class="fc-smart-picture__object"></noscript>
-                                    </picture>
-                                </div>
-                                <div class="fc-predictive-article__title">Collection Marly <br><small style="text-decoration:underline">Découvrir <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
-                                            <path d="M12.1717 12.0005L9.34326 9.17203L10.7575 7.75781L15.0001 12.0005L10.7575 16.2431L9.34326 14.8289L12.1717 12.0005Z"></path>
-                                        </svg></small></div>
-                            </a>
-                        </li>
-                        <li class="fc-mega-menu-grid__items" style="width:50%">
-                            <a href="/canape-sur-mesure/" style="display:block; width:100%; height:100%; cursor:pointer">
-                                <div class="">
-                                    <picture class="fc-smart-picture">
-                                        <img data-lazy-sizes="(min-width: 0rem) 50vw" alt="Canapés modulaires" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="fc-smart-picture__object" data-lazy-src="https://www.francecanape.com/wp-content/uploads/2024/06/vignettes-modulaire.gif"><noscript><img sizes="(min-width: 0rem) 50vw" alt="Canapés modulaires" src="https://www.francecanape.com/wp-content/uploads/2024/06/vignettes-modulaire.gif" class="fc-smart-picture__object"></noscript>
-                                    </picture>
-                                </div>
-                                <div class="fc-predictive-article__title">Les modulaires <br><small style="text-decoration:underline">Découvrir <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
-                                            <path d="M12.1717 12.0005L9.34326 9.17203L10.7575 7.75781L15.0001 12.0005L10.7575 16.2431L9.34326 14.8289L12.1717 12.0005Z"></path>
-                                        </svg></small></div>
-                            </a>
-                        </li>
-                    </ul>
-  
-                </div>
-  
-            </div>
-            <div class="menu-item_head" id="menu-item_head-2">
-                <a href="#" class="sub"><span>Convertibles</span></a>
-                <div class="submenu toplevel" style="display: none; margin-top: 80px; height: calc(-100px + 100vh);">
-                    <a href="#" class="sub_back"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                            <path d="M11.8284 12.0005L14.6569 14.8289L13.2426 16.2431L9 12.0005L13.2426 7.75781L14.6569 9.17203L11.8284 12.0005Z"></path>
-                        </svg> <span>Retour</span></a>
-  
-  
-  
-                    <a href="/c/convertibles/petit-canape-convertible-2-places/" class="sub subsub"><span>Fauteuils convertibles</span></a>
-                    <a href="/c/convertibles/canape-convertible-3-places/" class="sub subsub" style="margin-bottom:2rem"><span>Canapés convertibles</span></a>
-  
-                    <ul style="display: flex; flex-wrap: wrap;padding-bottom:3rem;padding-right:1rem">
-                                                <li class="fc-mega-menu-grid__items" style="width:50%">
-                            <a href="/conception-canape-convertible/?projectid=494_40ZH4U" style="display:block; width:100%; height:100%; cursor:pointer">
-  
-                                <div class="">
-                                    <picture class="fc-smart-picture">
-                                        <img data-lazy-sizes="(min-width: 0rem) 50vw" alt="Créer votre canapé convertible" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="fc-smart-picture__object" data-lazy-src="https://media.francecanape.com/push-menu-creer-convertible.jpg"><noscript><img sizes="(min-width: 0rem) 50vw" alt="Créer votre canapé convertible" src="https://media.francecanape.com/push-menu-creer-convertible.jpg" class="fc-smart-picture__object"></noscript>
-                                    </picture>
-                                </div>
-                                <div class="fc-predictive-article__title">Créer votre convertible <br> <small style="text-decoration:underline">Découvrir <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
-                                            <path d="M12.1717 12.0005L9.34326 9.17203L10.7575 7.75781L15.0001 12.0005L10.7575 16.2431L9.34326 14.8289L12.1717 12.0005Z"></path>
-                                        </svg></small></div>
-                            </a>
-                        </li>
-                        <li class="fc-mega-menu-grid__items" style="width:50%">
-                            <a href="/guides/choisir-couchage-canape-convertible/" style="display:block; width:100%; height:100%; cursor:pointer">
-                                <div class="">
-                                    <picture class="fc-smart-picture">
-                                        <img data-lazy-sizes="(min-width: 0rem) 50vw" alt="Guide : choisir le couchage pour son canapé convertible" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="fc-smart-picture__object" data-lazy-src="https://media.francecanape.com/push-choisir-couchage.jpg"><noscript><img sizes="(min-width: 0rem) 50vw" alt="Guide : choisir le couchage pour son canapé convertible" src="https://media.francecanape.com/push-choisir-couchage.jpg" class="fc-smart-picture__object"></noscript>
-                                    </picture>
-  
-                                </div>
-                                <div class="fc-predictive-article__title"> Choisir son couchage <br><small style="text-decoration:underline">Découvrir <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
-                                            <path d="M12.1717 12.0005L9.34326 9.17203L10.7575 7.75781L15.0001 12.0005L10.7575 16.2431L9.34326 14.8289L12.1717 12.0005Z"></path>
-                                        </svg></small>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-  
-            <div class="menu-item_main">
-                <a href="/c/fauteuil-chaise/"><span>Fauteuils</span></a>
-            </div>
-            <div class="menu-item_main">
-                <a href="/c/pouf-repose-pieds/"><span>Poufs</span></a>
-            </div>
-            <div class="menu-item_main">
-                <a href="/c/canapes/canape-outdoor/"><span>Outdoor</span></a>
-            </div>
-            <div class="menu-item_main" style="display:none">
-                <a href="/c/tables-basses/"><span>Tables basses</span></a>
-            </div>
-  
-            <div class="menu-item_main" style="display:none">
-                <a href="/c/tapis/"><span>Tapis</span></a>
-            </div>
-  
-            <div class="menu-item_main" style="display:none">
-                <a href="/c/promotions/"><span>Achat en ligne </span></a>
-            </div>
-  
-  
-            <hr style="margin-top:2rem;border-top:1px solid #111;max-width:250px">
-            <a href="/a-propos/">À propos</a>
-            <a href="/magazine/portraits/">Magazine</a>
-            <div class="menu-item_head" id="menu-item_head-3">
-                <a href="#" class="sub" style="text-transform:none;font-weight:400; font-size:1rem;padding: 3px 3px 3px 35px; font-family:'Futura'!important"><span>Revêtements</span></a>
-                <div class="submenu" style="display: none; margin-top: 80px; height: calc(-100px + 100vh);">
-                    <a href="#" class="sub_back"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                            <path d="M11.8284 12.0005L14.6569 14.8289L13.2426 16.2431L9 12.0005L13.2426 7.75781L14.6569 9.17203L11.8284 12.0005Z"></path>
-                        </svg> <span>Retour</span></a>
-                    <p class="sub-title"> <span>Une gamme complète </span></p>
-                    <a href="/matieres/tissus/"><span>Notre gamme de tissus</span></a>
-                    <a href="/matieres/types-tissus/"><span>Différents type de tissus</span></a>
-                    <a href="/matieres/tissus-entretien-facile/"><span> Nos tissus faciles à entretenir</span></a>
-                    <a href="/matieres/cuirs/" style="margin-bottom:2rem"><span>Notre gamme de cuir</span></a>
-  
-                    <ul style="display: flex; flex-wrap: wrap;padding-bottom:3rem;padding-right:1rem">
-                        <li class="fc-mega-menu-grid__items" style="width:50%">
-                            <a href="/matieres/collaboration-maisons-editeurs/" style="display:block; width:100%; height:100%; cursor:pointer">
-  
-                                <div class="">
-                                    <picture class="fc-smart-picture">
-                                        <img data-lazy-sizes="(min-width: 0rem) 50vw" alt="X Maisons d'Éditeurs" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="fc-smart-picture__object" data-lazy-src="https://media.francecanape.com/push-editeurs.jpg"><noscript><img sizes="(min-width: 0rem) 50vw" alt="X Maisons d'Éditeurs" src="https://media.francecanape.com/push-editeurs.jpg" class="fc-smart-picture__object"></noscript>
-                                    </picture>
-                                </div>
-                                <div class="fc-predictive-article__title">X Maisons d'Éditeurs <br><small style="text-decoration:underline">Découvrir <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
-                                            <path d="M12.1717 12.0005L9.34326 9.17203L10.7575 7.75781L15.0001 12.0005L10.7575 16.2431L9.34326 14.8289L12.1717 12.0005Z"></path>
-                                        </svg></small></div>
-                            </a>
-                        </li>
-                        <li class="fc-mega-menu-grid__items" style="width:50%">
-                            <a href="/matieres/prendre-soin-canape/" style="display:block; width:100%; height:100%; cursor:pointer">
-                                <div class="">
-                                    <picture class="fc-smart-picture">
-                                        <img data-lazy-sizes="(min-width: 0rem) 50vw" alt="Collection Marly" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" class="fc-smart-picture__object" data-lazy-src="https://media.francecanape.com/push-entretenir-canape.jpg"><noscript><img sizes="(min-width: 0rem) 50vw" alt="Collection Marly" src="https://media.francecanape.com/push-entretenir-canape.jpg" class="fc-smart-picture__object"></noscript>
-                                    </picture>
-                                </div>
-                                <div class="fc-predictive-article__title">Entretenir son canapé <br><small style="text-decoration:underline">Découvrir <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
-                                            <path d="M12.1717 12.0005L9.34326 9.17203L10.7575 7.75781L15.0001 12.0005L10.7575 16.2431L9.34326 14.8289L12.1717 12.0005Z"></path>
-                                        </svg></small></div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-  
-            <a href="/a-propos/#developpement-durable">Développement durable</a>
-            <a href="/professionels/contract/">Professionnels</a>
-            <a href="/magasins/">Nos magasins</a>
-            <a href="/request-quote/?appointment">Prendre rendez-vous</a>
-            <a href="/compte/" class="show-for-small">Mon espace client</a>
-            <a href="/aides/contact/" style="margin-bottom:5rem">Besoin d'aide ?</a>
-        </div>
-    </header>
+    <nav class="site-nav">
+        <div id="nav"></div>
+    </nav>
 
 <!-- original -->
     <section id="basket" class="flex-column-centre">
-     <div id="blocTitrePanier" class="flex-start size80">    
-        <h2 id="titre-panier">VOTRE PANIER</h2>
-     </div>
-    <div id="basket-fiche"> Nom du produit<class="flex-around">
-    <p> Prix unitaire </p>
-    <p> < continuer les achats </p>
-     <div> 
-       PRIX TOTAL
-     </div>
-    <div>
-     Nb total articles
-        <div></div>
-    </div>
-        
-        
-        
-
-        
-        
+        <div id="blocTitrePanier" class="flex items-start w-20 h-20">    
+           <h2 id="titre-panier">VOTRE PANIER</h2>
+        </div>
+        <div id="basket-fiche" class="box-border w-20 h-20">
+            <p> Nom du produit </p>
+            <p> Prix unitaire </p>
+            <p> continuer les achats </p>
+        <div> 
+            PRIX TOTAL
+        </div>
+        <div>
+            Nb total articles
+        </div>
     </section>
 </body>
 </html>
