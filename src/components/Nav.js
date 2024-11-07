@@ -28,7 +28,7 @@ function rigthtNave() {
     const div = document.createElement('div');
     div.className = 'self-end rounded-lg px-3 py-2 text-slate-700 font-medium';
     const links = [
-        ['🛒', '/shopping-cart'],
+        ['🛒', '/pagepanier'],
         ['👤', '/dashboard'],
       ];
 
