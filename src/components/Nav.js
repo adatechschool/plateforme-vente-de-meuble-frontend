@@ -27,12 +27,12 @@ function searchBar(homeProductsData) {
 }
 
 function rigthtNave() {
-  const div = document.createElement("div");
-  div.className = "self-end rounded-lg px-3 py-2 text-slate-700 font-medium";
-  const links = [
-    ["🛒", "/pagepanier"],
-    ["👤", "/dashboard"],
-  ];
+    const div = document.createElement('div');
+    div.className = 'self-end rounded-lg px-3 py-2 text-slate-700 font-medium';
+    const links = [
+        ['🛒', '/panier'],
+        ['👤', '/dashboard'],
+      ];
 
   links.forEach(([title, url]) => {
     const a = document.createElement("a");

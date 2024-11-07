@@ -1,5 +1,3 @@
-// import products from '../data_test/sample.json' with { type: 'json'}
-
 function displayProducts(data) {
   const container = document.createElement("div");
   container.className = "cardContainer";
