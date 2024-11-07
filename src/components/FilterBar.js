@@ -1,16 +1,15 @@
 function clickFilterBtn() {
   const displayFilterFormOn = document.querySelector(".filter-form");
-  if (displayFilterFormOn.style.display == "flex"){
-    displayFilterFormOn.style.display = "none"
-  }
-  else{
-    displayFilterFormOn.style.display = "flex"
+  if (displayFilterFormOn.style.display == "flex") {
+    displayFilterFormOn.style.display = "none";
+  } else {
+    displayFilterFormOn.style.display = "flex";
   }
 }
 
-function createFilterBtn() { 
+function createFilterBtn() {
   const displayFilterFormOff = document.querySelector(".filter-form");
-  displayFilterFormOff.style.display = "none"
+  displayFilterFormOff.style.display = "none";
   const newFilterButton = document.createElement("button");
   newFilterButton.setAttribute("id", "filter-button");
   newFilterButton.textContent = "FILTRES ▼";

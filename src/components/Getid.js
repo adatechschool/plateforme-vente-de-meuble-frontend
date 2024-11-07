@@ -1,9 +1,8 @@
 function getIdFromUrl() {
-    const url = new URL(window.location.href);
-    const idProduct = url.searchParams.get('id');
+  const url = new URL(window.location.href);
+  const idProduct = url.searchParams.get("id");
 
-    return idProduct;
-
+  return idProduct;
 }
 
 const productId = getIdFromUrl();

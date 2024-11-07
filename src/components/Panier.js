@@ -1,15 +1,4 @@
-// Fetch de la table "products" 
+// Fetch de la table "products"
 import Nav from "./Nav";
 
-
 document.getElementById("nav").appendChild(Nav());
-
-
-
-
-
-
-
-
-
-
