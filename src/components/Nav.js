@@ -4,7 +4,7 @@ function logo(title, url) {
     const div = document.createElement('div');
     const a = document.createElement('a');
     a.href = url;
-    div.className = 'self-start rounded-lg px-4 py-2 shadow-sm text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900';
+    div.className = 'self-start rounded-lg px-4 py-2 shadow-sm text-slate-700 font-medium hover:text-slate-900 hover:text-lg';
     a.textContent = title;
     div.appendChild(a);
     return (div);

@@ -1,22 +1,4 @@
-function handleClick(){}
-
-// function createCategory() { 
-//     const categoryChildContainer = document.createElement("div")
-//     categoryChildContainer.className = "category-child-container"
-//     let nameCategory = ["Armoire", "Chaise", "Lampe", "Table", "Canapé", "Lit", "Tapis", "Fauteuil"]
-//     nameCategory.forEach(name => {
-//         let newCategory = document.createElement ("button")
-//         newCategory.setAttribute("id", name.toLowerCase());
-//         newCategory.setAttribute("name", "button-category");
-//         newCategory.setAttribute("onclick", "handleClick()");
-//         newCategory.innerText = (name);
-//         categoryChildContainer.appendChild(newCategory);   
-//     });
-   
-//     return categoryChildContainer
-// }
-
-// export default createCategory;
+function handleClick(){} // Fonction à coder pour filtrer les produits par type
 
 function createCategory() { 
     const categoryChildContainer = document.createElement("div");
@@ -36,7 +18,6 @@ function createCategory() {
         newCategory.setAttribute("id", name.toUpperCase());
         newCategory.setAttribute("name", "button-category");
         newCategory.setAttribute("onclick", "handleClick()");
-        newCategory.setAttribute("href", "");
        
         newCategory.className = "px-4 py-2 bg-white hover:bg-gray-50 text-gray-800 rounded-sm transition-colors duration-200 hover:border-zinc-400 hover:rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50";
         newCategory.innerText = name;
