@@ -1,30 +1,16 @@
 import products from '../data_test/sample.json' with { type: 'json'}
 
-function displayProducts() {
-    try {
-        // const response = await fetch('http://192.168.5.181:3000/home');
-        // if (!response.ok) {
-        //     throw new Error('Erreur réseau');
-        // }
-        
-        // const data = await response.json();
-        const data = products
-        const container = document.createElement('div');;
-        container.className = 'cardContainer'
-        container.classList.add('grid', 'gap-2', 'grid-cols-4', 'p-4')
-        data.forEach(product => {
-            const card = createCard(product);
-            console.log(card);
-            container.appendChild(card);
-        });
-        return container;
-
-    } catch (error) {
-        console.error('Erreur:', error);
-        const container = document.querySelector('#containerCarte');
-        container.innerHTML = `<p>Erreur lors du chargement des produits: ${error.message}</p>`;
-        return container;
-    } 
+function displayProducts(data) {
+    const container = document.createElement('div');
+    container.className = 'cardContainer'
+    container.classList.add('grid', 'gap-2', 'grid-cols-4', 'p-4')
+    data.forEach(product => {
+        console.log(product.id)
+        const card = createCard(product);
+        container.appendChild(card);
+    });
+    console.log('CONTAINER', container)
+    return container;
 }
 
 const panier = []
@@ -46,7 +32,7 @@ function createCard(product) {
     const imgDiv = document.createElement('img');
     imgDiv.className = 'mainImage';
     imgDiv.classList.add('border-b-2', 'border-zinc-200','max-h-40', 'm-auto')
-    imgDiv.src = product.image_links[0];
+    imgDiv.src = product.image_links ? product.image_links[0] : 'https://i0.wp.com/www.oicfurniture.com/wp-content/uploads/visual-portfolio/placeholder.png';
 
     const descDiv = document.createElement('div');
     descDiv.className = 'productdesc';
