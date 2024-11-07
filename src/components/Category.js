@@ -1,4 +1,4 @@
-function handleClick(){} // Fonction à coder pour filtrer les produits par type
+import sortListByType from '../utils/Filter'
 
 function createCategory() { 
     const categoryChildContainer = document.createElement("div");
@@ -17,7 +17,8 @@ function createCategory() {
         let newCategory = document.createElement("a");
         newCategory.setAttribute("id", name.toUpperCase());
         newCategory.setAttribute("name", "button-category");
-        newCategory.setAttribute("onclick", "handleClick()");
+        //newCategory.setAttribute("onclick", "handleClick()");
+        newCategory.onclick = handleClick;
        
         newCategory.className = "px-4 py-2 bg-white hover:bg-gray-50 text-gray-800 rounded-sm transition-colors duration-200 hover:border-zinc-400 hover:rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50";
         newCategory.innerText = name;
@@ -36,6 +37,11 @@ function createCategory() {
     return categoryChildContainer;
 }
 
+function handleClick() {
+    sortListByType(this.id);
+} // Fonction à coder pour filtrer les produits par type
+
 export default createCategory;
+
 
 

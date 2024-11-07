@@ -9,3 +9,5 @@ let productData = await productRequest.json();
 document.getElementById("nav").appendChild(Nav());
 document.querySelector(".category-container").append(createCategory());
 document.getElementById("cartes").appendChild(displayProducts(productData));
+
+export default productData

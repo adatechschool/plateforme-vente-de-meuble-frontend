@@ -1,5 +1,5 @@
 function createCard(product) {
-
+    
     const carteDiv = document.createElement('div');
     carteDiv.className = 'carte';
     carteDiv.classList.add('border-solid', 'border-2', 'border-pink-100', 'max-w-sm', 'w-full')
@@ -15,7 +15,7 @@ function createCard(product) {
     const imgDiv = document.createElement('img');
     imgDiv.className = 'mainImage';
     imgDiv.classList.add('border-b-2', 'border-zinc-200','max-h-40', 'm-auto')
-    imgDiv.src = product.image_links[0];
+    imgDiv.src = product.image_links ? product.image_links[0] : 'https://i0.wp.com/www.oicfurniture.com/wp-content/uploads/visual-portfolio/placeholder.png';
 
     const descDiv = document.createElement('div');
     descDiv.className = 'productdesc';
@@ -39,8 +39,9 @@ function createCard(product) {
     carteDiv.appendChild(clickCarte);
     carteDiv.appendChild(descDiv);
     carteDiv.appendChild(btnElement);
+   
 
-    return carteDiv;
+    return carteDiv
 }
 
 export default createCard;

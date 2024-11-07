@@ -1,18 +1,12 @@
 //import products from '../data/sample.json' with { type: 'json'}
-import products from '../data_test/sample.json' with { type: 'json'}
+//import products from '../data_test/sample.json' with { type: 'json'}
 
 import createCard from './Createcard';
+import productData from '../main';
 
 
 function sortListByType(word) {
-  // const response = await fetch('http://192.168.5.181:3000/home');
-  // if (!response.ok) {
-  //     throw new Error('Erreur réseau');
-  // }
-  
-  // const data = await response.json();
-  const data = products;
-  console.log(word)
+  const data = productData;
   const container = document.createElement('div');
   container.className = 'cardContainer'
   container.classList.add('grid', 'gap-2', 'grid-cols-4', 'p-4')
@@ -20,7 +14,9 @@ function sortListByType(word) {
   cartesContainer.innerHTML = "";
   let regex = new RegExp(word.normalize("NFD").replace(/[\u0300-\u036f]/g, ""), "i");
   data.forEach(meuble => {
-    if (regex.test(meuble.type.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) {
+    if (regex.test(meuble.type.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
+      || regex.test(meuble.material.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
+      || regex.test(meuble.color.normalize("NFD").replace(/[\u0300-\u036f]/g, ""))) {
       container.appendChild(createCard(meuble));
     }
   });
