@@ -2,6 +2,7 @@ import "./styles/style.css";
 import Nav from "./components/Nav.js";
 import displayProducts from "./components/Carte.js";
 import createCategory from './components/Category';
+import filter from './utils/Filter.js';
 
 
 import { createBrowserHistory } from "history";
@@ -18,9 +19,6 @@ if (history.location.pathname == '/') {
 } else if (history.location.pathname == '/product') {
     const searchParams = new URLSearchParams(history.location.search);
     const idDuProduit = searchParams.get('id')
-
-
-
 
     const e = document.createElement('h1')
     e.innerText = 'Page du produit ' + idDuProduit

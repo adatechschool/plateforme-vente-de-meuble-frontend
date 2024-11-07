@@ -1,4 +1,4 @@
-function filterDropdown() {
+export function filterDropdown() {
     const div = document.createElement('div');
     div.className = 'relative';
   

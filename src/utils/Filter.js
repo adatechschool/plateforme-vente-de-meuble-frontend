@@ -4,7 +4,7 @@
 import createCard from './Createcard';
 import productData from '../main'
 
-function sortListByType(word) {
+export function sortListByType(word) {
   const data = productData;
   const container = document.createElement('div');
   container.className = 'cardContainer'
