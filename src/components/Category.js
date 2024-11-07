@@ -14,7 +14,7 @@ function createCategory() {
     let nameCategory = ["Armoire", "Chaise", "Lampe", "Table", "Canapé", "Lit", "Tapis", "Fauteuil"];
     
     nameCategory.forEach((name, index) => {
-        let newCategory = document.createElement("a");
+        let newCategory = document.createElement("button");
         newCategory.setAttribute("id", name.toUpperCase());
         newCategory.setAttribute("name", "button-category");
         //newCategory.setAttribute("onclick", "handleClick()");

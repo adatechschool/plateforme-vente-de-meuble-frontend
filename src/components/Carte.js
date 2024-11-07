@@ -22,7 +22,7 @@ function createCard(product) {
     carteDiv.classList.add('border-solid', 'border-2', 'border-pink-100', 'max-w-sm', 'w-full')
 
     const clickCarte = document.createElement('a');
-    clickCarte.href = '';
+    clickCarte.href = `/product/?id=${product.id}`;
     clickCarte.className = 'linkcarte';
     
     const topDiv = document.createElement('div')

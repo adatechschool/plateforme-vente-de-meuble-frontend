@@ -3,11 +3,26 @@ import Nav from "./components/Nav.js";
 import displayProducts from "./components/Carte.js";
 import createCategory from './components/Category';
 
-let productRequest = await fetch('http://192.168.5.181:3000/home');
-let productData = await productRequest.json();
+
+import { createBrowserHistory } from "history";
+let history = createBrowserHistory();
 
 document.getElementById("nav").appendChild(Nav());
 document.querySelector(".category-container").append(createCategory());
-document.getElementById("cartes").appendChild(displayProducts(productData));
+    
+if (history.location.pathname == '/') {
+    let productRequest = await fetch('http://192.168.5.181:3000/home');
+    let productData = await productRequest.json();
+    document.getElementById("cartes").appendChild(displayProducts(productData));
+} else if (history.location.pathname == '/product') {
+    const searchParams = new URLSearchParams(history.location.search);
+    const idDuProduit = searchParams.get('id')
 
-export default productData
+
+
+
+    const e = document.createElement('h1')
+    e.innerText = 'Page du produit ' + idDuProduit
+    document.getElementById('cartes').appendChild(e)
+}
+
