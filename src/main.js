@@ -4,7 +4,12 @@ import displayProducts from "./components/Carte.js";
 import createCategory from './components/Category';
 // import filter from './utils/Filter.js';
 import { displayProduct } from './components/Detailspage.js'
+import createFilterBtn from "./components/FilterBar.js";
 
+document.getElementById("nav").appendChild(Nav());
+document.querySelector(".category-container").append(createCategory());
+document.querySelector(".filter-container").appendChild(createFilterBtn());
+document.getElementById("cartes").appendChild(displayProducts());
 
 import { createBrowserHistory } from "history";
 let history = createBrowserHistory();
@@ -30,3 +35,7 @@ if (history.location.pathname == '/') {
 
     // document.getElementById('cartes').appendChild()
 }
+
+document.querySelector(".category-container").append(createCategory());
+document.querySelector(".filter-container").appendChild(createFilterBtn());
+document.getElementById("cartes").appendChild(displayProducts());

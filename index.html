@@ -14,64 +14,57 @@
       <div id="nav"></div>
     </nav>
 
-    <div class="main-container">
+    <div class="main-container flex justify-center items-center">
+      <div class="category-container"></div>
 
-      <div class="category-container">
-      </div>
-
-      <div class="filter-container">
-        <div class="filter-button">
-          <button id="filter-button">FILTER</button>
-        </div>
-        <form class="filter-form" name="filter" id="filter">
-        
-          <select name="select-filter-matiere" id="filter-matiere" class="">
-            <option value="">Matière</option>
-            <option value="bois">Bois</option>
-            <option value="acier">Acier</option>
-            <option value="cuir">Cuir</option>
-            <option value="plastique">Plastique</option>
-            <option value="tissus">Tissus</option>
-          </select>
-
-          <select name="select-filter-couleur" id="filter-couleur">
-            <option value="">Couleur</option>
-            <option value="rouge">Rouge</option>
-            <option value="vert">Vert</option>
-            <option value="Bleue">Bleue</option>
-            <option value="noir">Noir</option>
-            <option value="marron">Marron</option>
-            <option value="blanc">Blanc</option>
-            <option value="gris">Gris</option>
-            <option value="rose">Rose</option>
-            <option value="violet">Violet</option>
-            <option value="orange">Orange</option>
-          </select>
-
-          <select name="select-filter-etat-produits" id="filter-etat-produits">
-            <option value="">Etat du produit</option>
-            <option value="neuf">Neuf</option>
-            <option value="tres-bon-etat">Très bon état</option>
-            <option value="bon-etat">bon état</option>
-            <option value="satisfaisant">Satisfaisant</option>
-            <option value="inutilisable">Inutilisable</option>
-          </select>
-
-          <select name="select-filter-trier-par" id="filter-trier-par">
-            <option value="trier-par">Trier par</option>
-            <option value="en-vedette">En vedette</option>
-            <option value="les-plus-recents">Les plus récents</option>
-            <option value="prix-decroissant">Prix : Décroissant</option>
-            <option value="prix-decroissant">Prix : Croissant</option>
-          </select>
-        </form>
-      </div>
+      <div class="filter-container"></div>
     </div>
 
-            <div id="cartes"></div>
+    <form class="filter-form flex justify-center items-center">
+      <select id="select-filter-matiere">
+        <option value="" disabled selected hidden>Matière</option>
+        <option value="bois">Bois</option>
+        <option value="acier">Acier</option>
+        <option value="cuir">Cuir</option>
+        <option value="plastique">Plastique</option>
+        <option value="tissus">Tissus</option>
+      </select>
 
+      <select id="select-filter-couleur">
+        <option value="" disabled selected hidden>Couleur</option>
+        <option value="rouge">Rouge</option>
+        <option value="vert">Vert</option>
+        <option value="Bleue">Bleue</option>
+        <option value="noir">Noir</option>
+        <option value="marron">Marron</option>
+        <option value="blanc">Blanc</option>
+        <option value="gris">Gris</option>
+        <option value="rose">Rose</option>
+        <option value="violet">Violet</option>
+        <option value="orange">Orange</option>
+      </select>
 
-    <footer class="site-footer">
+      <select id="select-filter-etat-produits">
+        <option value="" disabled selected hidden>Etat du produit</option>
+        <option value="neuf">Neuf</option>
+        <option value="tres-bon-etat">Très bon état</option>
+        <option value="bon-etat">bon état</option>
+        <option value="satisfaisant">Satisfaisant</option>
+        <option value="inutilisable">Inutilisable</option>
+      </select>
+
+      <select id="select-filter-trier-par">
+        <option value="trier-par" disabled selected hidden>Trier par</option>
+        <option value="en-vedette">En vedette</option>
+        <option value="les-plus-recents">Les plus récents</option>
+        <option value="prix-decroissant">Prix : Décroissant</option>
+        <option value="prix-decroissant">Prix : Croissant</option>
+      </select>
+    </form>
+
+    <div class="grid-container" id="cartes"></div>
+
+    <footer class="site-footer flex justify-center">
       <div class="list-footer">
         <ul>
           <li>© 2024 Meublio</li>

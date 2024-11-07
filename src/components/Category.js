@@ -19,7 +19,7 @@ function createCategory() {
         newCategory.setAttribute("name", "button-category");
         newCategory.onclick = handleClick;
        
-        newCategory.className = "px-4 py-2 bg-white hover:bg-gray-50 text-gray-800 rounded-sm transition-colors duration-200 hover:border-zinc-400 hover:rounded-md focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50";
+        newCategory.className = "px-4 py-2 bg-white hover:bg-gray-50 text-gray-800 rounded-sm transition-colors duration-200 hover:border-zinc-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50";
         newCategory.innerText = name;
         buttonContainer.appendChild(newCategory);
 
