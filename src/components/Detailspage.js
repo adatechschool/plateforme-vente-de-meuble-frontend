@@ -1,35 +1,18 @@
 // Fetch de la table "products" 
-import Nav from "./NavDetail";
+import Nav from "./Nav";
 
 
 document.getElementById("nav").appendChild(Nav());
 
-async function displayDetails() {
-    const data = {
-        "id": 6,
-        "product_name": "Table en chêne",
-        "price": 120,
-        "type": "table",
-        "material": "bois",
-        "color": "marron",
-        "state": "neuf",
-        "description": "Table en bois massif idéale pour la salle à manger.",
-        "in_stock": 1,
-        "user_id": 1,
-        "created_at": "2024-01-15T09:23:00.000Z",
-        "updated_at": "2024-02-01T08:10:00.000Z"
-      }
-
-}
 async function displayDetailsProd() {
     try {
-        const response = await fetch('http://192.168.5.181:3000/api/pathpourdetails');
+            const response = await fetch('http://192.168.5.181:3000/product/6');
         if (!response.ok) {
             throw new Error('Erreur réseau');
         }
         
         const data = await response.json();
-        
+        console.log(data);
         
         data.forEach(product => {
             const card = createCard(product);
@@ -41,6 +24,7 @@ async function displayDetailsProd() {
         container.innerHTML = `<p>Erreur lors du chargement des produits: ${error.message}</p>`;
     } 
 }
+displayDetailsProd();
 
 // ensuite il faut faire une fonction dans laquelle tu pourras mettre le code donc tu as besoin
 
