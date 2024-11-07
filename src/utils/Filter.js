@@ -2,10 +2,9 @@
 //import products from '../data_test/sample.json' with { type: 'json'}
 
 import createCard from './Createcard';
-import productData from '../main'
 
-export function sortListByType(word) {
-  const data = productData;
+export function sortListByType(word, homeProductsData) {
+  const data = homeProductsData;
   const container = document.createElement('div');
   container.className = 'cardContainer'
   container.classList.add('grid', 'gap-2', 'grid-cols-4', 'p-4')

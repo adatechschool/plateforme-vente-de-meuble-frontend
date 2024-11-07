@@ -1,52 +1,80 @@
-// Fetch de la table "products" 
-import Nav from "./Nav";
 
+export function displayProduct(data) {
+    const container = document.createElement('div');
+    container.className = 'infosProduct'
 
-document.getElementById("nav").appendChild(Nav());
+    const imgDiv = document.createElement('div');
+    imgDiv.className = 'images';
 
-async function displayDetailsProd() {
-    try {
-            const response = await fetch('http://192.168.5.181:3000/product/6');
-        if (!response.ok) {
-            throw new Error('Erreur réseau');
-        }
-        
-        const data = await response.json();
-        console.log(data);
-        
-        data.forEach(product => {
-            const card = createCard(product);
-            container.appendChild(card);
-        });
+    const mainImg = document.createElement('img');
+    mainImg.className = 'main-images';
+    mainImg.src = data.image_links ? data.image_links[0] : 'https://i0.wp.com/www.oicfurniture.com/wp-content/uploads/visual-portfolio/placeholder.png';
 
-    } catch (error) {
-        console.error('Erreur:', error);
-        container.innerHTML = `<p>Erreur lors du chargement des produits: ${error.message}</p>`;
-    } 
+    const infosDiv = document.createElement('div');
+    infosDiv.className = 'infoprod';
+    
+    const productTitle = document.createElement('h2');
+    productTitle.innerText = data.product_name
+
+    const productPrice = document.createElement('p')
+    productPrice.innerText = data.price
+
+    const detailsDiv = document.createElement('div')
+    detailsDiv.className = 'product-details'
+    detailsDiv.innerHTML = `
+    <h2>Infos produit :</h2>
+    ${data.description} 
+    ${data.material} 
+    ${data.color}`
+    
+    imgDiv.appendChild(mainImg)
+    infosDiv.appendChild(productTitle)
+    infosDiv.appendChild(productPrice)
+    infosDiv.appendChild(detailsDiv)
+    container.appendChild(imgDiv)
+    container.appendChild(infosDiv)
+   
+    return container;
 }
-displayDetailsProd();
 
-// ensuite il faut faire une fonction dans laquelle tu pourras mettre le code donc tu as besoin
+// function displayInfos(product) {
+    
+//     const carteDiv = document.createElement('div');
+//     carteDiv.className = 'carte';
 
-function createCard(product) {
-}
+//     const clickCarte = document.createElement('a');
+//     clickCarte.href = `/product/?id=${product.id}`;
+//     clickCarte.className = 'linkcarte';
+    
+//     const topDiv = document.createElement('div')
+//     topDiv.className = 'topDiv'
 
-let count = 0;
+//     const imgDiv = document.createElement('img');
+//     imgDiv.className = 'mainImage';
+//     imgDiv.src = product.image_links ? product.image_links[0] : 'https://i0.wp.com/www.oicfurniture.com/wp-content/uploads/visual-portfolio/placeholder.png';
 
-let panier = document.getElementById('panier').addEventListener('click', function ajoutPanier(){
-    if(count > 0){
-        count = count +1; 
-        
-    }
-    console.log(count);
-})
+//     const descDiv = document.createElement('div');
+//     descDiv.className = 'productdesc';
+//     descDiv.innerHTML = `
+//         <h1 class="text-lg"><b>${product.product_name}</b></h1>
+//         <p><b>Prix :</b> ${product.price}€</p>
+//     `;
 
+//     const btnElement = document.createElement('button');
+//     btnElement.className = 'btn addToCart';
+//     btnElement.innerText = 'Ajouter au panier'
+//     btnElement.addEventListener('click', () => {
+//         panier.push(product.id);
+//         console.log(panier);
+//     })
 
+//     clickCarte.appendChild(topDiv)
+//     topDiv.appendChild(imgDiv);
+//     carteDiv.appendChild(clickCarte);
+//     carteDiv.appendChild(descDiv);
+//     carteDiv.appendChild(btnElement);
+   
 
-
-
-
-
-
-
+//     return carteDiv
+// }
 

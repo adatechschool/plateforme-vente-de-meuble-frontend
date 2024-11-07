@@ -1,19 +1,15 @@
-import products from '../data_test/sample.json' with { type: 'json'}
+// import products from '../data_test/sample.json' with { type: 'json'}
 
 function displayProducts(data) {
     const container = document.createElement('div');
     container.className = 'cardContainer'
     container.classList.add('grid', 'gap-2', 'grid-cols-4', 'p-4')
     data.forEach(product => {
-        console.log(product.id)
         const card = createCard(product);
         container.appendChild(card);
     });
-    console.log('CONTAINER', container)
     return container;
 }
-
-const panier = []
 
 function createCard(product) {
     
