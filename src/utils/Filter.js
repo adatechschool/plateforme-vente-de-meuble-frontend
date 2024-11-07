@@ -2,8 +2,7 @@
 //import products from '../data_test/sample.json' with { type: 'json'}
 
 import createCard from './Createcard';
-import productData from '../main';
-
+import productData from '../main'
 
 function sortListByType(word) {
   const data = productData;

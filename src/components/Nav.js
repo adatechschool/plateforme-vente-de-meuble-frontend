@@ -46,7 +46,7 @@ function rigthtNave() {
 function Nav() {
     const nav = document.createElement('nav');
     nav.className = 'flex items-center justify-between px-4 py-2 bg-white shadow-md';
-    nav.appendChild(logo("meublio", '/index'));
+    nav.appendChild(logo("meublio", '/'));
     nav.appendChild(searchBar());
     nav.appendChild(rigthtNave());
     return nav;
